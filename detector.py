@@ -17,8 +17,6 @@ def v_to_dbm(v, freq):
     return interp1d(cal_freqs, x, fill_value='extrapolate')(freq) + 3.3 #From parallel 50 ohm termination
 
 if __name__ == "__main__":
-    print v_to_dbm(0.207106227106, 4181481481.48)
-
     if len(sys.argv) != 2:
         print "Give frequency in GHz as argument"
         exit()
